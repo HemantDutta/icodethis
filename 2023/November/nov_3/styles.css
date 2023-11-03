@@ -1,0 +1,49 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #27292b;
+    --card-light: #2f3133;
+    --card-dark: #232526;
+    --yellow: #fec844;
+    --button: #1c1e1f;
+    --band-blue: #02a9f7;
+    --band-purple: #a903ff;
+    --band-pink: #f30256;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.container .card-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card-flex .card {
+    height: 650px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .card-flex .card .card-band {
+    position: absolute;
+    display: none;
+}
+
+.container .card-flex .card .card-top {
+    flex-basis: 45%;
+}
