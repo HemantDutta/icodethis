@@ -18,32 +18,132 @@
 body {
     background-color: var(--bg-color);
     background-size: cover;
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
     display: grid;
     place-items: center;
+    min-height: 100vh;
 }
 
 .container .card-flex {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 32px;
 }
 
 .container .card-flex .card {
-    height: 650px;
+    height: 600px;
     width: 350px;
     display: flex;
     flex-direction: column;
     position: relative;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .container .card-flex .card .card-band {
     position: absolute;
-    display: none;
+    background-color: #000;
+    padding: 16px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    rotate: 45deg;
+    right: -35%;
+    top: 4%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.container .card-flex .card:nth-child(1) .card-band {
+    background-color: var(--band-blue);
+}
+
+.container .card-flex .card:nth-child(2) .card-band {
+    background-color: var(--band-purple);
+}
+
+.container .card-flex .card:nth-child(3) .card-band {
+    background-color: var(--band-pink);
 }
 
 .container .card-flex .card .card-top {
-    flex-basis: 45%;
+    flex-basis: 40%;
+    background-color: var(--card-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container .card-flex .card .card-top .header {
+    font-size: 18px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.container .card-flex .card .card-top .content {
+    color: #c2c2c2;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container .card-flex .card .card-bottom {
+    flex-basis: 60%;
+    background-color: var(--card-dark);
+    padding: 20px;
+}
+
+.container .card-flex .card .card-bottom .list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.container .card-flex .card .card-bottom .list span {
+    color: #c2c2c2;
+    font-weight: bold;
+}
+
+.container .card-flex .card .card-bottom .list span i {
+    color: var(--yellow);
+}
+
+.container .card-flex .card .card-bottom .cta {
+    margin-top: 50px;
+}
+
+.container .card-flex .card .card-bottom .cta button {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--button);
+    outline: none;
+    border: none;
+    color: var(--yellow);
+    font-size: 17px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.container .card-flex .card .card-bottom .cta button:hover {
+    background-color: #393d3f;
+}
+
+@media screen and (max-width: 1200px) {
+    .container .card-flex {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container .card-flex .card {
+        width: 90vw;
+    }
 }
