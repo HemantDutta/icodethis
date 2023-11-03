@@ -138,6 +138,20 @@ body {
     padding: 16px 32px;
     border-radius: 50px;
     font-weight: bold;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.container .card-flex .card .card-bottom .buttons button:hover {
+    scale: 1.05;
+}
+
+.container .card-flex .card .card-bottom .buttons button:nth-child(1):hover {
+    background-color: #f9f9ff;
+}
+
+.container .card-flex .card .card-bottom .buttons button:nth-child(2):hover {
+    background-color: #4d6cec;
 }
 
 .container .card-flex .card .card-bottom .buttons button:nth-child(1) {
