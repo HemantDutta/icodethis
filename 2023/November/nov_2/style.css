@@ -1,0 +1,132 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #36474e;
+    --bg-secondary: #3e535c;
+    --icon: #adb1b4;
+    --main-bg: #abb0b1;
+    --heart: #fc3e7e;
+}
+
+body {
+    background-color: var(--main-bg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container .card {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 380px;
+    gap: 32px;
+}
+
+.container .card .card-img {
+    width: 100%;
+    flex-basis: 40%;
+    overflow: hidden;
+    padding: 32px 32px 0;
+}
+
+
+.container .card .card-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 15px #505b60;
+}
+
+.container .card .card-content {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+}
+
+.container .card .card-content .head {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.container .card .card-content .tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #a8a8a8;
+    font-size: 14px;
+}
+
+.container .card .card-content .tag span#date {
+    background-color: #324048;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.container .card .card-content p {
+    color: white;
+}
+
+.container .card .card-links {
+    background-color: var(--bg-secondary);
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.container .card .card-links .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.container .card .card-links i {
+    cursor: pointer;
+    color: var(--icon);
+    transition: all 0.2s ease;
+}
+
+.container .card .card-links .link:nth-child(1) i.active {
+    color: var(--heart);
+}
+
+.container .card .card-links i.active {
+    color: #888b8d;
+}
+
+@media screen and (max-width: 420px) {
+    .container .card {
+        width: 90vw;
+    }
+
+    .container .card .card-img {
+        padding: 32px 16px 0;
+    }
+
+    .container .card .card-content {
+        padding: 0 16px;
+    }
+
+    .container .card .card-links {
+        padding: 0 16px;
+    }
+}
+
+
+
