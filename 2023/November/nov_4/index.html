@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>November 4 2023 | Hemant Dutta</title>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--  CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div class="container">
+    <div class="content-box">
+        <div class="box-left">
+            <div class="search-bar">
+                <input type="text" name="search" id="search" placeholder="Search">
+            </div>
+            <div class="menu-list">
+                <div class="list-item" id="0" onclick="closeOthers(this)"><span class="text">Reminders</span><span class="notif">2</span></div>
+                <div class="list-item" id="1" onclick="closeOthers(this)"><span class="text">To do list</span><span class="notif">9</span></div>
+                <div class="list-item active" id="2" onclick="closeOthers(this)"><span class="text">shopping list</span><span class="notif">4</span></div>
+                <div class="list-item" id="3" onclick="closeOthers(this)"><span class="text">Other</span><span class="notif">3</span></div>
+            </div>
+        </div>
+        <div class="box-right">
+            <section id="groceries" class="active">
+                <div class="item-list active">
+                    <div class="list-header">
+                        <span>Groceries</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="items">
+                        <span>Butter</span>
+                        <span>Orange Juice</span>
+                        <span>Cheese</span>
+                        <span>Chocolate</span>
+                        <span>Corn Flakes</span>
+                        <span>Potatoes</span>
+                        <span>Avocado</span>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <div class="list-header">
+                        <span>Electronics</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <div class="list-header">
+                        <span>Books</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <div class="list-header">
+                        <span>Car</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </section>
+            <section id="todo">
+                <div class="item-list active">
+                    <div class="list-header">
+                        <span>Today's tasks</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="items">
+                        <span>Linkedin Post</span>
+                        <span>Gym</span>
+                        <span>JavaScript</span>
+                        <span>Be Happy :)</span>
+                    </div>
+                </div>
+            </section>
+            <section id="reminders">
+                <div class="item-list active">
+                    <div class="list-header">
+                        <span>Today's Reminders</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="items">
+                        <span>Update Fest Website</span>
+                        <span>Pay Rent</span>
+                    </div>
+                </div>
+            </section>
+            <section id="others">
+                <div class="item-list active">
+                    <div class="list-header">
+                        <span>Gadgets</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="items">
+                        <span>Speaker</span>
+                        <span>Laptop</span>
+                        <span>Mouse</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--Scripts-->
+<script src="index.js"></script>
+</body>
+</html>
