@@ -1,0 +1,25 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #283766;
+    --login: #6a83d3;
+    --off: #1e2b57;
+    --off-text: #697ed4;
+    --bg: #f2f5ff;
+}
+
+body {
+    background-color: var(--main-bg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
