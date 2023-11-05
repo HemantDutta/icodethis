@@ -13,13 +13,157 @@
 }
 
 body {
-    background-color: var(--main-bg);
+    background-color: var(--bg);
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .container {
     display: grid;
     place-items: center;
     min-height: 100vh;
+}
+
+.container .login-card {
+    height: 650px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: #fff;
+    padding: 0 32px 100px;
+    overflow: hidden;
+    box-shadow: 0 10px 55px rgba(60, 83, 154, 0.4);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.container .login-card .msg {
+    font-size: 14px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.container .login-card .msg.error {
+    color: red;
+}
+
+.container .login-card .msg.success {
+    color: #00b200;
+}
+
+.container .login-card .lamp img {
+    height: 200px;
+    opacity: 0.1;
+    translate: 0 -10%;
+}
+
+.container .login-card .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.container .login-card .form .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.container .login-card .form .input-field label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #1b254d;
+}
+
+.container .login-card .form .input-field input {
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    border: 3px solid #eeeeee;
+}
+
+.container .login-card .form .input-field input::placeholder {
+    color: #c0c0c0;
+}
+
+.container .login-card .form .button {
+    width: 100%;
+}
+
+.container .login-card .form .button button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--login);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(78, 96, 215, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.container .login-card .form .button button:hover {
+    background-color: #6b7cec;
+}
+
+.container .light-card {
+    display: none;
+    transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+    height: 650px;
+    width: 400px;
+    background-color: #ffffff;
+    transform: translateY(20%);
+    opacity: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 32px 50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .light-card .dark-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--dark);
+    transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.container .light-card button {
+    border-radius: 100%;
+    height: 150px;
+    border: none;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-color: var(--off);
+    color: var(--off-text);
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #4660c9;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.container .light-card button:hover {
+    box-shadow: 0 0 15px #4660c9;
+}
+
+.container .light-card button:active {
+    scale: 0.9;
+    box-shadow: 0 0 25px #4660c9;
+}
+
+@media screen and (max-width: 480px) {
+    .container .light-card, .container .login-card {
+        width: 90vw;
+    }
 }
