@@ -60,3 +60,26 @@ function onOff() {
         }, 50)
     }
 }
+
+//Logout
+document.getElementById("logout").addEventListener("click", () => {
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let loginCard = document.getElementById("login");
+    let light = document.getElementById("light");
+    let msg = document.getElementById("msg");
+
+    username.value = "";
+    password.value = "";
+    msg.innerText = "Logged Out";
+    light.style.transform = "translateY(20%)";
+    light.style.opacity = "0";
+    setTimeout(()=>{
+        light.style.display = "none";
+        loginCard.style.display = "flex";
+        setTimeout(()=>{
+            loginCard.style.transform = "translateY(0%)";
+            loginCard.style.opacity = "1";
+        },50);
+    },400)
+})
