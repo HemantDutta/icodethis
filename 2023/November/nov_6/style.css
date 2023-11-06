@@ -9,9 +9,9 @@
 }
 
 body {
-    background-color: var(--main-bg);
+    background: linear-gradient(to bottom, );
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .container {
