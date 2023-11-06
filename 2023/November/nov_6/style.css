@@ -9,13 +9,153 @@
 }
 
 body {
-    background: linear-gradient(to bottom, );
+    background: linear-gradient(45deg, rgba(28, 51, 28, 0.8), rgba(163, 196, 163, 0.8)), url("bg.jpg") bottom no-repeat fixed;
     background-size: cover;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
 }
 
 .container {
     display: grid;
     place-items: center;
     min-height: 100vh;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 1280px;
+}
+
+.container .content .header {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.container .content .header .head {
+    font-size: 76px;
+    color: white;
+    font-family: Serif, sans-serif;
+}
+
+.container .content .header .date {
+    font-size: 22px;
+    color: #e5e5e5;
+}
+
+.container .content .countdown {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    color: white;
+    gap: 16px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.container .content .countdown > * {
+    flex: 1;
+}
+
+.container .content .countdown .time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .content .countdown .time-item .value {
+    font-size: 126px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: center;
+    padding: 48px 0;
+    box-shadow: 0 30px 25px rgba(45, 89, 45, 0.8);
+    position: relative;
+    z-index: 110;
+}
+
+.container .content .countdown .time-item:nth-child(1) .value {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.container .content .countdown .time-item:last-child .value {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.container .content .countdown .time-item .unit {
+    font-size: 36px;
+    position: relative;
+    z-index: 100;
+}
+
+.container .content .details {
+    color: #e5e5e5;
+    line-height: 2;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .container .content {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container .content {
+        width: 90vw;
+    }
+
+    .container .content .countdown .time-item .value {
+        font-size: 86px;
+    }
+
+    .container .content .countdown .time-item .unit {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .container .content .countdown .time-item .value {
+        font-size: 56px;
+    }
+
+    .container .content .countdown .time-item .unit {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container .content .header .head {
+        font-size: 56px;
+    }
+
+    .container .content .countdown {
+        flex-direction: column;
+    }
+
+    .container .content {
+        padding-top: 50px;
+    }
+
+    .container .content .countdown .time-item {
+        width: 100%;
+    }
+
+    .container .content .countdown .time-item:nth-child(1) .value {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .container .content .countdown .time-item:last-child .value {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
