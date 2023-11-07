@@ -19,16 +19,20 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .container {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    padding: 0 10px;
 }
 
 .container .card {
     background-color: var(--audio);
-    height: 150px;
-    width: 650px;
+    min-height: 150px;
     border-radius: 10px;
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.8s ease;
@@ -37,8 +41,23 @@ body {
     place-items: center;
 }
 
+.container .card.au {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container .card.exp {
+    width: 500px;
+}
+
+.container .card.str {
+    width: 550px;
+}
+
 @media screen and (max-width: 550px) {
-    .container .card {
+    .container .card.au, .container .card.exp, .container .card.str {
         width: 90vw;
     }
 }
@@ -61,6 +80,17 @@ body {
     transition: all 0.6s ease;
 }
 
+@media screen and (max-width: 690px) {
+    .container .card .audio-box .line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container .card .audio-box {
+        scale: 0.8;
+    }
+}
 .container .card .audio-box .round {
     display: flex;
     flex-direction: column;
@@ -94,7 +124,7 @@ body {
     opacity: 0;
 }
 
-.container .card .audio-box .round .check {
+.container .card .audio-box .round .check-a {
     height: 55px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 100%;
@@ -106,7 +136,7 @@ body {
     margin-bottom: 14px;
 }
 
-.container .card .audio-box .round .check img {
+.container .card .audio-box .round .check-a img {
     height: 25px;
 }
 
@@ -174,4 +204,132 @@ body {
 .container .card .star {
     display: none;
     opacity: 0;
+    transition: all 0.8s ease;
+    transform: translateY(100%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    padding: 56px 32px;
+    position: relative;
+}
+
+.container .card .star .header {
+    font-size: 24px;
+    color: white;
+}
+
+.container .card .star .star-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+    color: white;
+}
+
+.container .card .star .star-flex span {
+    height: 45px;
+    aspect-ratio: 1/1;
+    transition: all 0.2s ease;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+}
+
+.container .card .star .star-flex span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container .card .star .star-flex span.active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.container .card .star .text {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.container .card .star .next {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.container .card .star .next button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: var(--services);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.container .card .check {
+    height: 100%;
+    width: 100%;
+    transition: all 0.8s ease;
+    transform: translateY(100%);
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 32px;
+    position: relative;
+}
+
+.container .card .check .header {
+    font-size: 24px;
+    color: white;
+}
+
+.container .card .check ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.container .card .check ul li {
+    color: white;
+    font-size: 18px;
+}
+
+.container .card .check .next {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.container .card .check .next button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: var(--check);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.container .card .thanks {
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    display: none;
+    transition: all 0.8s ease;
+    transform: translateY(100%);
 }

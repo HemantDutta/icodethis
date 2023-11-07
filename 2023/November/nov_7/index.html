@@ -18,23 +18,23 @@
 </head>
 <body>
 <div class="container">
-    <div class="card" id="card">
+    <div class="card au" id="card">
         <div class="audio-box" id="audioBox">
             <div class="round">
                 <div class="icon" id="audio"><img src="audio.png" alt="audio"></div>
-                <div class="check" id="check1"><img src="check.png" alt="check"></div>
+                <div class="check-a" id="check1"><img src="check.png" alt="check"></div>
                 <span class="tag">Audio</span>
             </div>
             <span class="line" id="line1"></span>
             <div class="round" id="video">
                 <div class="icon"><img src="video.png" alt="video"></div>
-                <div class="check" id="check2"><img src="check.png" alt="check"></div>
+                <div class="check-a" id="check2"><img src="check.png" alt="check"></div>
                 <span class="tag">Video</span>
             </div>
             <span class="line" id="line2"></span>
             <div class="round" id="perf">
                 <div class="icon"><img src="performance.png" alt="performance"></div>
-                <div class="check" id="check3"><img src="check.png" alt="check"></div>
+                <div class="check-a" id="check3"><img src="check.png" alt="check"></div>
                 <span class="tag">Performance</span>
             </div>
         </div>
@@ -54,13 +54,36 @@
         <div class="star" id="star">
             <span class="header">How do you rate our services?</span>
             <div class="star-flex">
-                <span><i class="fa-regular fa-star"></i></span>
-                <span><i class="fa-regular fa-star"></i></span>
-                <span><i class="fa-regular fa-star"></i></span>
-                <span><i class="fa-regular fa-star"></i></span>
-                <span><i class="fa-regular fa-star"></i></span>
+                <span onclick="starRating(this)" data-value="1"><i class="fa-regular fa-star"></i></span>
+                <span onclick="starRating(this)" data-value="2"><i class="fa-regular fa-star"></i></span>
+                <span onclick="starRating(this)" data-value="3"><i class="fa-regular fa-star"></i></span>
+                <span onclick="starRating(this)" data-value="4"><i class="fa-regular fa-star"></i></span>
+                <span onclick="starRating(this)" data-value="5"><i class="fa-regular fa-star"></i></span>
             </div>
-            <div class="text"></div>
+            <div class="text">
+                <span>Bad</span>
+                <span>Very Good</span>
+            </div>
+            <div class="next" id="next2">
+                <button type="button" onclick="openCheck()">Next</button>
+            </div>
+        </div>
+        <div class="check" id="check">
+            <span class="header">
+                What didn't work properly?
+            </span>
+            <ul class="checklist">
+                <li><input type="checkbox" name="blur" id="blur"> Video was blurry</li>
+                <li><input type="checkbox" name="sound" id="sound"> Sound wasn't working</li>
+                <li><input type="checkbox" name="crash" id="crash"> App was crashing</li>
+                <li><input type="checkbox" name="else" id="else"> Else</li>
+            </ul>
+            <div class="next" id="next3">
+                <button type="button" onclick="openThanks()">Next</button>
+            </div>
+        </div>
+        <div class="thanks" id="thanks">
+            <span>Thank you for your time!</span>
         </div>
     </div>
 </div>
