@@ -5,11 +5,16 @@
 }
 
 :root {
-
+    --services: #db627d;
+    --rate: #9b348e;
+    --check: #8343d3;
+    --audio: #f9755b;
+    --bg: #091d3b;
+    --bg-front: #132646;
 }
 
 body {
-    background-color: var(--bg);
+    background: url("nov7bg.svg") center no-repeat;
     background-size: cover;
     font-family: 'Rubik', sans-serif;
 }
@@ -18,4 +23,155 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+}
+
+.container .card {
+    background-color: var(--audio);
+    height: 150px;
+    width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s ease;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    .container .card {
+        width: 90vw;
+    }
+}
+
+.container .card .audio-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: translateY(100%);
+}
+
+.container .card .audio-box .line {
+    background-color: #fff;
+    width: 75px;
+    height: 2px;
+    margin-top: 25px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.container .card .audio-box .round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    width: 120px;
+}
+
+.container .card .audio-box .round .icon {
+    animation: pulsate-icon 1.5s ease infinite;
+}
+
+.container .card .audio-box .round .icon img {
+    transition: all 0.4s ease;
+}
+
+@keyframes pulsate-icon {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container .card .audio-box .round#video, .container .card .audio-box .round#perf {
+    opacity: 0;
+}
+
+.container .card .audio-box .round .check {
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    place-items: center;
+    display: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin-bottom: 14px;
+}
+
+.container .card .audio-box .round .check img {
+    height: 25px;
+}
+
+.container .card .exp-box {
+    display: none;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: translateY(100%);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 32px;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+}
+
+.container .card .exp-box .header {
+    font-size: 24px;
+}
+
+.container .card .exp-box .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.container .card .exp-box .rating span {
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    transition: all 0.2s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .card .exp-box .rating span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container .card .exp-box .rating span.active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.container .card .exp-box .next {
+    text-align: right;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.container .card .exp-box .next button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: var(--rate);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.container .card .star {
+    display: none;
+    opacity: 0;
 }

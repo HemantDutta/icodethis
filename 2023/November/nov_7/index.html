@@ -18,7 +18,51 @@
 </head>
 <body>
 <div class="container">
-
+    <div class="card" id="card">
+        <div class="audio-box" id="audioBox">
+            <div class="round">
+                <div class="icon" id="audio"><img src="audio.png" alt="audio"></div>
+                <div class="check" id="check1"><img src="check.png" alt="check"></div>
+                <span class="tag">Audio</span>
+            </div>
+            <span class="line" id="line1"></span>
+            <div class="round" id="video">
+                <div class="icon"><img src="video.png" alt="video"></div>
+                <div class="check" id="check2"><img src="check.png" alt="check"></div>
+                <span class="tag">Video</span>
+            </div>
+            <span class="line" id="line2"></span>
+            <div class="round" id="perf">
+                <div class="icon"><img src="performance.png" alt="performance"></div>
+                <div class="check" id="check3"><img src="check.png" alt="check"></div>
+                <span class="tag">Performance</span>
+            </div>
+        </div>
+        <div class="exp-box" id="expBox">
+            <span class="header">Rate your experience</span>
+            <div class="rating">
+                <span onclick="closeOthers(this)">1</span>
+                <span onclick="closeOthers(this)">2</span>
+                <span onclick="closeOthers(this)">3</span>
+                <span onclick="closeOthers(this)">4</span>
+                <span onclick="closeOthers(this)">5</span>
+            </div>
+            <div class="next" id="next">
+                <button type="button" onclick="openStars()">Next</button>
+            </div>
+        </div>
+        <div class="star" id="star">
+            <span class="header">How do you rate our services?</span>
+            <div class="star-flex">
+                <span><i class="fa-regular fa-star"></i></span>
+                <span><i class="fa-regular fa-star"></i></span>
+                <span><i class="fa-regular fa-star"></i></span>
+                <span><i class="fa-regular fa-star"></i></span>
+                <span><i class="fa-regular fa-star"></i></span>
+            </div>
+            <div class="text"></div>
+        </div>
+    </div>
 </div>
 <!--Scripts-->
 <script src="index.js"></script>
