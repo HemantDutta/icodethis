@@ -146,7 +146,8 @@ function openCheck() {
     setTimeout(() => {
         star.style.display = "none";
         rateValue==="5"?thanks.style.display = "grid":check.style.display = "flex";
-        rateValue==="5"?card.style.width = window.outerWidth > 550 ? "450px" : "90vw":card.style.width = window.outerWidth > 550 ? "450px" : "90vw";
+        card.classList.remove("str");
+        card.classList.add("ch");
         rateValue==="5"?card.style.minHeight = "250px":card.style.minHeight = "400px";
         rateValue==="5"?card.style.backgroundColor = "#c71855":card.style.backgroundColor = "#8343d3";
         setTimeout(() => {
@@ -167,7 +168,8 @@ function openThanks() {
     setTimeout(() => {
         check.style.display = "none";
         thanks.style.display = "grid";
-        card.style.width = window.outerWidth > 550 ? "450px" : "90vw";
+        card.classList.remove("str");
+        card.classList.add("ch");
         card.style.minHeight = "250px";
         card.style.backgroundColor = "#c71855";
         setTimeout(() => {

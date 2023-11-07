@@ -56,8 +56,13 @@ body {
     width: 550px;
 }
 
+.container .card.ch {
+    width: 450px;
+}
+
 @media screen and (max-width: 550px) {
-    .container .card.au, .container .card.exp, .container .card.str {
+    .container .card.au, .container .card.exp, .container .card.str,
+    .container .card.ch {
         width: 90vw;
     }
 }
@@ -91,6 +96,7 @@ body {
         scale: 0.8;
     }
 }
+
 .container .card .audio-box .round {
     display: flex;
     flex-direction: column;
