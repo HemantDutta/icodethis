@@ -1,0 +1,144 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #1f2123;
+    --card: #26282a;
+    --follow: #f6705e;
+    --cd1: #d294f5;
+    --cd2: #66edc2;
+    --cd3: #eab85b;
+}
+
+body {
+    background-color: var(--bg);
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+    letter-spacing: 1px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container .card {
+    background-color: var(--card);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 85px rgba(0, 0, 0, 0.5);
+    width: 500px;
+}
+
+.container .card .item {
+    display: flex;
+    align-items: stretch;
+    height: 150px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.container .card .item:last-child {
+    border-bottom: none;
+}
+
+.container .card .item .image {
+    flex-basis: 35%;
+    padding: 16px;
+    position: relative;
+}
+
+.container .card .item .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.container .card .item .image span {
+    position: absolute;
+    height: 8px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    top: 11%;
+    left: 10%;
+    box-shadow: 0 0 0 5px var(--card);
+}
+
+.container .card .item:nth-child(1) .image span {
+    background-color: var(--cd1);
+}
+
+.container .card .item:nth-child(2) .image span {
+    background-color: var(--cd2);
+}
+
+.container .card .item:nth-child(3) .image span {
+    background-color: var(--cd3);
+}
+
+.container .card .item .text {
+    flex-basis: 65%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .card .item .text .name {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.container .card .item .text .desg {
+    color: grey;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.container .card .item .text .buttons {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.container .card .item .text .buttons > * {
+    flex: 1;
+    padding: 10px;
+}
+
+.container .card .item .text .buttons button.msg {
+    background-color: transparent;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: white;
+    border: 1px solid var(--follow);
+}
+
+.container .card .item .text .buttons button.flw {
+    background-color: var(--follow);
+    border: 1px solid var(--follow);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
