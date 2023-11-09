@@ -126,6 +126,8 @@ body {
 .container .card .item .text .buttons > * {
     flex: 1;
     padding: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .container .card .item .text .buttons button.msg {
@@ -136,9 +138,54 @@ body {
     border: 1px solid var(--follow);
 }
 
+.container .card .item .text .buttons button.msg:hover {
+    background-color: var(--follow);
+    color: black;
+}
+
 .container .card .item .text .buttons button.flw {
     background-color: var(--follow);
     border: 1px solid var(--follow);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+.container .card .item .text .buttons button.flw:hover {
+    background-color: #f8624d;
+}
+
+@media screen and (max-width: 590px) {
+    .container .card {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container .card .item .text .buttons {
+        flex-direction: column-reverse;
+    }
+
+    .container .card .item .text .buttons > * {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .container .card .item {
+        height: auto;
+    }
+
+    .container .card {
+        padding: 32px 16px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container .card .item {
+        flex-direction: column;
+    }
+
+    .container .card .item .image span {
+        top: 4%;
+        left: 4%;
+    }
 }
