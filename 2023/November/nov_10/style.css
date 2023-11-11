@@ -14,6 +14,19 @@
     --gr2-c2: #f05754;
 }
 
+a, button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a:focus, button:focus {
+    outline: none !important;
+}
+
 body {
     background-color: var(--bg);
     background-size: cover;
@@ -162,3 +175,22 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 1300px) {
+    .container .card-flex {
+        flex-direction: column;
+        gap: 32px;
+        width: max-content;
+    }
+
+    .container .card-flex .card.diff {
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .container .card-flex .card {
+        width: 90vw;
+    }
+
+}
