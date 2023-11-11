@@ -31,7 +31,10 @@
             </div>
             <div class="right">
                 <i class="fa-solid fa-stopwatch"></i>
-                <span>24:02</span>
+                <div>
+                    <span id="min">30</span> :
+                    <span id="secs">00</span>
+                </div>
             </div>
         </div>
         <div class="card-mid">
@@ -39,15 +42,15 @@
             <span class="ques">What is the Structure and Behavior of Matter Under Extreme Conditions?</span>
             <div class="answers">
                 <span class="header">Answer options</span>
-                <div class="ans-item active">
+                <div class="ans-item active" onclick="chooseAns(this)">
                     <span class="char">A</span>
                     <span class="val">Mitochondria</span>
                 </div>
-                <div class="ans-item">
+                <div class="ans-item" onclick="chooseAns(this)">
                     <span class="char">B</span>
                     <span class="val">Photosynthesis</span>
                 </div>
-                <div class="ans-item">
+                <div class="ans-item" onclick="chooseAns(this)">
                     <span class="char">C</span>
                     <span class="val">JavaScript</span>
                 </div>

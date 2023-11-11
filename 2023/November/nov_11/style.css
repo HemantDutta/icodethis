@@ -76,6 +76,13 @@ body {
     font-size: 20px;
 }
 
+.container .card .card-top .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .container .card .card-mid {
     position: relative;
     z-index: 115;
@@ -151,6 +158,7 @@ body {
     padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .container .card .card-bottom button.ansL {
@@ -159,10 +167,28 @@ body {
     color: var(--button);
 }
 
+.container .card .card-bottom button.ansL:hover {
+    background-color: var(--button);
+    color: white;
+}
+
+.container .card .card-bottom button.ansL:active {
+    scale: 0.9;
+}
+
 .container .card .card-bottom button.ansS {
     background-color: var(--button);
     border: 2px solid var(--button);
     color: #ffffff;
+}
+
+.container .card .card-bottom button.ansS:hover {
+    background-color: #2f98bb;
+    border: 2px solid #2f98bb;
+}
+
+.container .card .card-bottom button.ansS:active {
+    scale: 0.9;
 }
 
 @media screen and (max-width: 991px) {
