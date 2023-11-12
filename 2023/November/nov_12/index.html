@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>November 12 2023 | Hemant Dutta</title>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--  Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!--  Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-top">
+            <div class="left">
+                <span>My Wishlist</span>
+                <span id="currDate">12 December, 2023</span>
+            </div>
+            <div class="right">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="quan">0</span>
+                </div>
+                <button type="button" id="wishlist">Send Wishlist</button>
+            </div>
+        </div>
+        <div class="card-main">
+            <div class="cart-item">
+                <div class="img">
+                    <img src="ci1.jpg" alt="list-item1">
+                </div>
+                <div class="details">
+                    <span class="title">Yankee Candle Medium Jar - Turquoise Sky</span>
+                    <span class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, doloribus ea in officia quaerat repellat reprehenderit repudiandae suscipit ut veniam!</span>
+                </div>
+                <div class="atc">
+                    <i class="fa-solid fa-xmark" tabindex="0" onclick="removeItem(0)"></i>
+                    <span class="price">$12.79</span>
+                    <button type="button" class="atcB" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="img">
+                    <img src="ci2.jpg" alt="list-item1">
+                </div>
+                <div class="details">
+                    <span class="title">Flowers and butterflies Ceramic Travel Coffee Mug</span>
+                    <span class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, doloribus ea in officia quaerat repellat reprehenderit repudiandae suscipit ut veniam!</span>
+                </div>
+                <div class="atc">
+                    <i class="fa-solid fa-xmark" tabindex="0" onclick="removeItem(1)"></i>
+                    <span class="price">$14.99</span>
+                    <button type="button" class="atcB" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="img">
+                    <img src="ci3.jpeg" alt="list-item1">
+                </div>
+                <div class="details">
+                    <span class="title">Nicola Spring Patterned Cereal Bowls</span>
+                    <span class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, doloribus ea in officia quaerat repellat reprehenderit repudiandae suscipit ut veniam!</span>
+                </div>
+                <div class="atc">
+                    <i class="fa-solid fa-xmark" tabindex="0" onclick="removeItem(2)"></i>
+                    <span class="price">$19.99</span>
+                    <button type="button" class="atcB" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reset" id="reset">
+        <button type="button" onclick="reset()">Reset</button>
+    </div>
+</div>
+<!--Scripts-->
+<script src="index.js"></script>
+</body>
+</html>
