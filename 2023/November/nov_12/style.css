@@ -39,6 +39,8 @@ body {
     min-height: 100vh;
     width: 100vw;
     letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 ::-webkit-scrollbar {
@@ -46,14 +48,16 @@ body {
 }
 
 .container {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     position: relative;
+    padding: 10px;
 }
 
 .container .reset {
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     display: none;
 }
@@ -137,9 +141,38 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .card .card-main .card-send {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background-color: var(--gr1-c1);
+    transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 115;
+}
+
+.container .card .card-main .card-send span {
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .container .card .card-main .cart-item {
+    position: relative;
+    z-index: 100;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     height: 180px;
@@ -196,7 +229,6 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     color: white;
-    width: 100%;
 }
 
 .container .card .card-main .cart-item .atc button:active {
@@ -218,4 +250,50 @@ body {
 
 .container .card .card-main .cart-item .atc i.fa-xmark:active {
     color: #9a9a9a;
+}
+
+@media screen and (max-width: 1049px) {
+    .container .card {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 826px) {
+    .container .card .card-main .cart-item {
+        grid-template-columns: 1fr;
+        height: max-content;
+        gap: 16px;
+    }
+
+    .container .card .card-main .cart-item > * {
+        min-height: 100px;
+    }
+
+    .container .card .card-main .cart-item .img, .container .card .card-main .cart-item .details, .container .card .card-main .cart-item .atc {
+        grid-column: 1/-1;
+    }
+
+    .container .card .card-main .cart-item .img img {
+        height: 250px;
+    }
+
+    .container .card .card-main .cart-item .atc {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container .card .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .container .card .card-main .card-send {
+        justify-content: flex-start;
+        padding-top: 100px;
+    }
 }
