@@ -22,7 +22,83 @@
 </head>
 <body>
 <div class="container">
-
+    <div class="card">
+        <div class="card-top">
+            <div class="navigation">
+                <i class="fa-solid fa-arrow-left" tabindex="0"></i>
+                <i class="fa-solid fa-bell" tabindex="0"></i>
+            </div>
+            <div class="event">
+                <img src="nghtmre.webp" alt="artist">
+                <div class="text">
+                    <span class="name">NGHTMRE</span>
+                    <span class="schedule">Event Schedule</span>
+                </div>
+            </div>
+            <div class="months">
+                <span tabindex="0" class="active" id="nov" onclick="changeMonth(this)">November</span>
+                <span tabindex="0" id="dec" onclick="changeMonth(this)">December</span>
+            </div>
+        </div>
+        <div class="card-bottom">
+            <div class="event-item">
+                <span class="red-dot"></span>
+                <div class="details">
+                    <span class="date">NOV 26</span>
+                    <span class="city">DENVER, CO, US</span>
+                    <div class="location">
+                        <span class="venue"><i class="fa-solid fa-location-dot"></i>&nbsp;Pepsi Center</span>
+                        <span class="time"><i class="fa-solid fa-clock"></i>&nbsp;20:00</span>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button type="button"><i class="fa-solid fa-ticket"></i>&nbsp;&nbsp;Buy Ticket</button>
+                </div>
+            </div>
+            <div class="event-item">
+                <span class="red-dot"></span>
+                <div class="details">
+                    <span class="date">NOV 27</span>
+                    <span class="city">Omaha, NE, US</span>
+                    <div class="location">
+                        <span class="venue"><i class="fa-solid fa-location-dot"></i>&nbsp;Xcel Center</span>
+                        <span class="time"><i class="fa-solid fa-clock"></i>&nbsp;20:00</span>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button type="button" class="sold"><i class="fa-solid fa-ticket"></i>&nbsp;&nbsp;Sold Out</button>
+                </div>
+            </div>
+            <div class="event-item">
+                <span class="red-dot"></span>
+                <div class="details">
+                    <span class="date">NOV 28</span>
+                    <span class="city">Tulsa, OK, US</span>
+                    <div class="location">
+                        <span class="venue"><i class="fa-solid fa-location-dot"></i>&nbsp;BOK Center</span>
+                        <span class="time"><i class="fa-solid fa-clock"></i>&nbsp;20:00</span>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button type="button"><i class="fa-solid fa-ticket"></i>&nbsp;&nbsp;Buy Ticket</button>
+                </div>
+            </div>
+            <div class="event-item">
+                <span class="red-dot"></span>
+                <div class="details">
+                    <span class="date">NOV 29</span>
+                    <span class="city">St. Paul, MN, US</span>
+                    <div class="location">
+                        <span class="venue"><i class="fa-solid fa-location-dot"></i>&nbsp;Century Center</span>
+                        <span class="time"><i class="fa-solid fa-clock"></i>&nbsp;20:00</span>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button type="button"><i class="fa-solid fa-ticket"></i>&nbsp;&nbsp;Buy Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--Scripts-->
 <script src="index.js"></script>
