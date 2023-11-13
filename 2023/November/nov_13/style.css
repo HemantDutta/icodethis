@@ -1,0 +1,49 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #26282a;
+    --card-top: #2e3032;
+    --card-bot: #1d1f20;
+    --gr1-c1: #ae97c1;
+    --gr1-c2: #5ed6fe;
+    --gr2-c1: #e65da5;
+    --gr2-c2: #f05754;
+}
+
+a, button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a:focus, button:focus {
+    outline: none !important;
+}
+
+body {
+    background-color: var(--bg);
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+    letter-spacing: 1px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
